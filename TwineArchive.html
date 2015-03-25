@@ -2,6 +2,10 @@
 
 It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise from the upper floors of the building growing ever more unbearable.
 
+(if: $startingDeskHours &lt; 24)[
 [[Starting Desk&lt;-Stay at Your Desk (set: $startingDeskHours to $startingDeskHours + 1)]]
-[[First Floor Hallway&lt;-Finally Go Investigate The Noise]]</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="796.6666666666667,543.3333333333334">When you think about it, it hasn&#x27;t been that long since you moved into this new building. The company was looking for somewhere to expand to, and this seemed like the perfect location: 3 stories, </tw-passagedata></tw-storydata>
+](else:)[
+[[Starting Desk Ending&lt;-Stay at Your Desk]]
+][[First Floor Hallway&lt;-Finally Go Investigate The Noise]]
+</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="796.6666666666667,543.3333333333334">When you think about it, it hasn&#x27;t been that long since you moved into this new building. The company was looking for somewhere to expand to, and this seemed like the perfect location: 3 stories, </tw-passagedata></tw-storydata>
 
