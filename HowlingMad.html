@@ -10,9 +10,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="Starting Desk" tags="" position="796,393">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
+<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Starting Desk" tags="" position="796,393">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
 
 It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise from the upper floors of the building growing ever more unbearable.
 
@@ -41,13 +39,19 @@ You begin ascending the stairs as the door you entered through thuds back into p
 
 Peering through the thin strip of window in the door you can&#x27;t make out much. It looks light the in the corridor the door opens into is off, but some of the lights in the adjoining rooms are bleeding into it. As far as you can tell there&#x27;s nothing much going on in the hallway.
 
-[[SecondStoryCorridor1&lt;-Enter the Second Story Via the Doors]]</tw-passagedata><tw-passagedata pid="5" name="SecondStoryCorridor1" tags="" position="808,858">You enter the corridor and the door rocks closed behind you, the magnetic lock engaging. The corridor is dimly lit by the light spilling from a couple of rooms to your right, and one to the left. There are many rooms to each side that are either unlit or have their doors closed.
+[[SecondStoryCorridor1&lt;-Enter the Second Story Via the Doors]]</tw-passagedata><tw-passagedata pid="5" name="SecondStoryCorridor1" tags="" position="808,858">(set: $secondStoryCorridorLights to false)You enter the corridor and the door rocks closed behind you, the magnetic lock engaging. The corridor is dimly lit by the light spilling from a couple of rooms to your right, and one to the left. There are many rooms to each side that are either unlit or have their doors closed.
 
 There&#x27;s a musky, somewhat unpleasant smell to the air. Seems like people aren&#x27;t taking care of the place all that well while it&#x27;s being renovated.
 
 [[SecondStoryLightCheck&lt;-Check for a Light Switch]]
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="809,1008"></tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="684,1008">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="958,1008">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="809,1007">(set: $secondStoryCorridorLights to true)You slide your hand along the wall and after a small amount of searching it runs over the tell tale bump of a light switch. With a soft click the lights flicker on.
+
+You gaze down at the switches and recoil in shock -- there&#x27;s smears of something red and rusty over the switches. As the reader, you&#x27;re almost certain that it&#x27;s blood, but as the in game character you&#x27;re not yet sold on the horrors unfolding here.
+
+Compounding the shock is that where the door release should be there is a set of wires jutting from the wall. Either the release was not properly installed, or has been ripped from the wall.
+
+The lights flicker.</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="684,1008">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="958,1008">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
