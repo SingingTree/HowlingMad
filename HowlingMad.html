@@ -10,7 +10,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Starting Desk" tags="" position="796.6666666666667,393.33333333333337">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
+<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Starting Desk" tags="" position="796,393">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
 
 It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise from the upper floors of the building growing ever more unbearable.
 
@@ -19,13 +19,13 @@ It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise
 ](else:)[
 [[Starting Desk Ending&lt;-Stay at Your Desk]]
 ][[First Floor Hallway&lt;-Finally Go Investigate The Noise]]
-</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="806.6666666666667,553.3333333333334">You stride down the hallway towards the stairwell. You&#x27;re ready to investigate! As you journey you find yourself musing expositionally.
+</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="806,553">You stride down the hallway towards the stairwell. You&#x27;re ready to investigate! As you journey you find yourself musing expositionally.
 
 It hasn&#x27;t been that long since you moved into this new building. The company was looking for somewhere to expand to, and this seemed like the perfect location: 3 floors and a kitchenette on each, already wired with fibre, and the exorcism for this year had already been completed.
 
 But it seems like you see less and less of your colleagues around. The noise from the renovations of the upper floors just won&#x27;t stop -- how can they not be done by now!? At this rate returning to the old office would be a blessing, even if it&#x27;s a little cramped.
 
-[[Stairwell&lt;-Continue Into the Stairwell]]</tw-passagedata><tw-passagedata pid="3" name="Starting Desk Ending" tags="" position="646.6666666666667,556.6666666666667">The darkness at the corners of your vision encroach further and further as your head swims. Your ears ring and your mouth is dry. Your vision narrows to a pin prick and the ringing intensifies.
+[[Stairwell&lt;-Continue Into the Stairwell]]</tw-passagedata><tw-passagedata pid="3" name="Starting Desk Ending" tags="" position="646,556">The darkness at the corners of your vision encroach further and further as your head swims. Your ears ring and your mouth is dry. Your vision narrows to a pin prick and the ringing intensifies.
 
 You wake to find yourself face down in yourself face down on your keyboard. You lift your head and brush the full stop key with your nose. You gaze meets your screen and you recoil in surprise -- upon the screen is a manuscript. You eyes flitter over what appears to be the final page -- completed as you woke. Even looking at the final page you know this is the most beautiful thing ever written. A single tear rolls down your cheek.
 
@@ -33,17 +33,25 @@ You wake to find yourself face down in yourself face down on your keyboard. You 
 
 You glance out the window of your ultra-mansion. You have it all, except one thing -- you still wonder about what was going on upstairs in the office that one fateful day. Your super model, Nobel prize winning, world celebrated for their philanthropic deeds life partner asks &quot;What&#x27;s the matter?&quot;. You glance back, &quot;Oh, nothing.&quot;
 
-(text-style: &quot;bold&quot;)[The End]</tw-passagedata><tw-passagedata pid="4" name="Stairwell" tags="" position="808.3333333333334,708.3333333333334">There&#x27;s a beep as you press the release for the magnetic lock on the door to the stairwell. You step into the stairwell, the noise from the upper floors ever so louder in here.
+(text-style: &quot;bold&quot;)[The End]</tw-passagedata><tw-passagedata pid="4" name="Stairwell" tags="" position="808,708">There&#x27;s a beep as you press the release for the magnetic lock on the door to the stairwell. You step into the stairwell, the noise from the upper floors ever so louder in here.
 
 You begin ascending the stairs as the door you entered through thuds back into place and the locks reengage. You drudge up the rest stairwell and arrive at the set of doors opening onto the second story.
 
 Peering through the thin strip of window in the door you can&#x27;t make out much. It looks light the in the corridor the door opens into is off, but some of the lights in the adjoining rooms are bleeding into it. As far as you can tell there&#x27;s nothing much going on in the hallway.
 
-[[SecondStoryCorridor1&lt;-Enter the Second Story Via the Doors]]</tw-passagedata><tw-passagedata pid="5" name="SecondStoryCorridor1" tags="" position="808.3333333333334,858.3333333333334">You enter the corridor and the door rocks closed behind you, the magnetic lock engaging. The corridor is dimly lit by the light spilling from a couple of rooms to your right, and one to the left. There are many rooms to each side that are either unlit or have their doors closed.
+[[SecondStoryCorridor1&lt;-Enter the Second Story Via the Doors]]</tw-passagedata><tw-passagedata pid="5" name="SecondStoryCorridor1" tags="" position="808,858">(set: $secondStoryCorridorLights to false)You enter the corridor and the door rocks closed behind you, the magnetic lock engaging. The corridor is dimly lit by the light spilling from a couple of rooms to your right, and one to the left. There are many rooms to each side that are either unlit or have their doors closed.
 
 There&#x27;s a musky, somewhat unpleasant smell to the air. Seems like people aren&#x27;t taking care of the place all that well while it&#x27;s being renovated.
 
-[[SecondStoryLightCheck&lt;-Check for a Light Switch]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="808.3333333333334,1008.3333333333334">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[SecondStoryLightCheck&lt;-Check for a Light Switch]]
+[[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="809,1007">(set: $secondStoryCorridorLights to true)You slide your hand along the wall and after a small amount of searching it runs over the tell tale bump of a light switch. With a soft click the lights flicker on.
+
+You gaze down at the switches and recoil in shock -- there&#x27;s smears of something red and rusty over the switches. As the reader, you&#x27;re almost certain that it&#x27;s blood, but as the in game character you&#x27;re not yet sold on the horrors unfolding here.
+
+Compounding the shock is that where the door release should be there is a set of wires jutting from the wall. Either the release was not properly installed, or has been ripped from the wall.
+
+The lights flicker.</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="684,1008">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="958,1008">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
