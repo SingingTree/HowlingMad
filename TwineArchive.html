@@ -1,18 +1,19 @@
 <tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Starting Desk" tags="" position="800,400">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
 
 It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise from the upper floors of the building growing ever more unbearable.
-(if: $startingDeskHours &lt; 24)[
-[[Starting Desk&lt;-Stay at Your Desk(set: $startingDeskHours to $startingDeskHours + 1)]]
-](else:)[
-[[Starting Desk Ending&lt;-Stay at Your Desk]]
-][[First Floor Hallway&lt;-Finally Go Investigate The Noise]]
-</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="806,553">You stride down the hallway towards the stairwell. You&#x27;re ready to investigate! As you journey you find yourself musing expositionally.
+
+(if: $startingDeskHours &lt; 24)[(set: $startingDeskHours to $startingDeskHours + 1)(link-goto: &quot;Stay at Your Desk&quot;, &quot;Starting Desk&quot;)](else:)[(link-goto: &quot;Stay at Your Desk&quot;, &quot;StartingDeskEnding&quot;)]
+[[First Floor Hallway&lt;-Finally Go Investigate The Noise]]
+
+&lt;!-- Hacks to map the map editor look nice
+[[StartingDeskEnding]]
+--&gt;</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="800.0001,550">You stride down the hallway towards the stairwell. You&#x27;re ready to investigate! As you journey you find yourself musing expositionally.
 
 It hasn&#x27;t been that long since you moved into this new building. The company was looking for somewhere to expand to, and this seemed like the perfect location: 3 floors and a kitchenette on each, already wired with fibre, and the exorcism for this year had already been completed.
 
 But it seems like you see less and less of your colleagues around. The noise from the renovations of the upper floors just won&#x27;t stop -- how can they not be done by now!? At this rate returning to the old office would be a blessing, even if it&#x27;s a little cramped.
 
-[[Stairwell&lt;-Continue Into the Stairwell]]</tw-passagedata><tw-passagedata pid="3" name="Starting Desk Ending" tags="" position="650,550">The darkness at the corners of your vision encroach further and further as your head swims. Your ears ring and your mouth is dry. Your vision narrows to a pin prick and the ringing intensifies.
+[[Stairwell&lt;-Continue Into the Stairwell]]</tw-passagedata><tw-passagedata pid="3" name="StartingDeskEnding" tags="" position="650,550">The darkness at the corners of your vision encroach further and further as your head swims. Your ears ring and your mouth is dry. Your vision narrows to a pin prick and the ringing intensifies.
 
 You wake to find yourself face down in yourself face down on your keyboard. You lift your head and brush the full stop key with your nose. You gaze meets your screen and you recoil in surprise -- upon the screen is a manuscript. You eyes flitter over what appears to be the final page -- completed as you woke. Even looking at the final page you know this is the most beautiful thing ever written. A single tear rolls down your cheek.
 
@@ -31,7 +32,9 @@ Peering through the thin strip of window in the door you can&#x27;t make out muc
 There&#x27;s a musky, somewhat unpleasant smell to the air. Seems like people aren&#x27;t taking care of the place all that well while it&#x27;s being renovated.
 
 [[SecondStoryLightCheck&lt;-Check for a Light Switch]]
+
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
+
 [[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="800,975">(set: $secondStoryCorridorLights to true)You slide your hand along the wall and after a small amount of searching it runs over the tell tale bump of a light switch. With a soft click the lights flicker on.
 
 You gaze down at the switches and recoil in shock -- there&#x27;s smears of something red and rusty over the switches. As the reader, you&#x27;re almost certain that it&#x27;s blood, but as the in game character you&#x27;re not yet sold on the horrors unfolding here.
@@ -41,15 +44,18 @@ Compounding the shock is that where the door release should be there is a set of
 The lights flicker.
 
 [[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
+
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1150,975"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="450,975"></tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
+
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1175,975"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="450,975"></tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
 
 [[SecondStoryWireTouch&lt;-Reunite the Wires with One Another]]
+
 [[SecondStoryCorridor1&lt;-Leave the Wires Alone]]</tw-passagedata><tw-passagedata pid="10" name="SecondStoryWireTouch" tags="" position="925,1075">(set: $secondStoryDoorShocked to true)As you press the wires into a loving embrace they burst into an electric celebration. The lights in the corridor flicker more violently in jubilation. It is as if your body is comprised entirely of tongues, each licking a 9 volt battery (specifically a transistor battery).
 
 You wake on the floor, the lights in the corridor still appear to be working. You look over at the wires, they appear to have somehow been parted again. They look back at you, and you now know them for what they truly are: imbued with malevolent sentience. You decide it best not to interact with them if they&#x27;re gonna be like this.
 
-[[SecondStoryCorridor1&lt;-Get Up]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="800,1250">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked)[The door release wires glower at you.]
+[[SecondStoryCorridor1&lt;-Get Up]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="1075,1150">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked)[The door release wires glower at you.]
 
 (if: $secondStoryCorridorLights &amp;&amp; not $secondStoryDoorShocked)[
 [[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
