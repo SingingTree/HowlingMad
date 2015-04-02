@@ -58,7 +58,7 @@ The lights flicker.
 
 [[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1175,975"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="450,975"></tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1175,975"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="450,975">You move left down the corridor, towards</tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
 
 [[SecondStoryWireTouch&lt;-Reunite the Wires with One Another]]
 [[SecondStoryCorridor1&lt;-Leave the Wires Alone]]</tw-passagedata><tw-passagedata pid="10" name="SecondStoryWireTouch" tags="" position="925,1075">(set: $secondStoryDoorShocked to true)As you press the wires into a loving embrace they burst into an electric celebration. The lights in the corridor flicker more violently in jubilation. It is as if your body is comprised entirely of tongues, each licking a 9 volt battery (specifically a transistor battery).
@@ -66,6 +66,8 @@ The lights flicker.
 You wake on the floor, the lights in the corridor still appear to be working. You look over at the wires, they appear to have somehow been parted again. They look back at you, and you now know them for what they truly are: imbued with malevolent sentience. You decide it best not to interact with them if they&#x27;re gonna be like this.
 
 [[SecondStoryCorridor1&lt;-Get Up]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="802,1301">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked)[The door release wires glower at you.]
+
+There&#x27;s a number of rooms to the left and right along the corridor. There&#x27;s a single room with light flowing from it to your left, and two on the right.
 
 (if: $secondStoryCorridorLights &amp;&amp; not $secondStoryDoorShocked)[(link-goto: &quot;Check the Door Release Wires&quot;, &quot;SecondStoryDoorRelease1&quot;)
 ][[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
