@@ -78,7 +78,17 @@ A fluorescent bulb dangles from the ceiling, occasionally flickering. The room l
 
 [[SecondStoryTableBody&lt;-Investigate the Table Body]]
 [[SecondStoryWallSkeleton&lt;-Investigate the Wall Skeleton]]
-[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="167,790"></tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="158,1073"></tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="151,1208"></tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="330,684">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="SecondStoryWallSkeleton" tags="" position="455,673">The wall skeleton appears to be grinning, or grimacing, or perhaps smiling coyly while winking at you... You consider that it&#x27;s actually kinda hard to categorise the expression of a skeleton given the lack of skin.
+[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="167,790"></tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="158,1073"></tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="151,1208"></tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="325,676">You move closer to investigate the body and gasp! It&#x27;s that person, your coworker who was both smart and had a large collection of shoes -- most of them stylish!
+
+They look to be more recently killed than the nearby skeleton, on account of that they&#x27;re not yet a skeleton. There&#x27;s a number of rips and tears running the length of the torso from which the large sums of blood staining the table likely came from.
+
+(if: not $secondStoryTableBodyInvestigated)[(set: $secondStoryTableBodyInvestigated to true)(link-goto: &quot;Investigate the Body&quot;, &quot;SecondStoryTableBodyInvestigate&quot;)
+][[SecondStoryWallSkeleton&lt;-Investigate the Wall Skeleton]]
+[[SecondStoryCorridorLeft1&lt;-Depart the Room]]
+
+&lt;!--
+[[SecondStoryTableBodyInvestigate&lt;-Investigate the Body]]
+--&gt;</tw-passagedata><tw-passagedata pid="18" name="SecondStoryWallSkeleton" tags="" position="455,673">The wall skeleton appears to be grinning, or grimacing, or perhaps smiling coyly while winking at you... You consider that it&#x27;s actually kinda hard to categorise the expression of a skeleton given the lack of skin.
 
 You&#x27;re unsure as the the cause of death, given that your degree is in molecular art history, and not forensic calculus, but the skeleton certainly does appear to have belonged to a person who was once alive.
 
@@ -87,5 +97,5 @@ You&#x27;re unsure as the the cause of death, given that your degree is in molec
 [[SecondStoryCorridorLeft1&lt;-Depart the Room]]
 </tw-passagedata><tw-passagedata pid="19" name="SecondStorySkeletonKey" tags="" position="455,548">There doesn&#x27;t appear to be a skeleton key, you&#x27;re not even sure what that would look like or why you&#x27;d be looking for one.
 
-[[SecondStoryWallSkeleton&lt;-Er, okay]]</tw-passagedata></tw-storydata>
+[[SecondStoryWallSkeleton&lt;-Er, okay]]</tw-passagedata><tw-passagedata pid="20" name="SecondStoryTableBodyInvestigate" tags="" position="330,549">[[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata></tw-storydata>
 
