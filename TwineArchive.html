@@ -48,7 +48,7 @@ The lights flicker.
 
 [[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1175,975"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="455,982">You move left down the corridor, the first door along the corridor is closed, the second is open with light filing out of it, a third and fourth are also closed, with the corridor then flowing into a bend.
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1175,975"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="455,982">You move into the corridor to the left of this story&#x27;s entrance. The first door along the corridor is closed, the second is open with light filing out of it, a third and fourth are also closed, with the corridor then flowing into a bend.
 
 [[SecondStoryLeftDoor1&lt;-Check the First Door]]
 [[SecondStoryLeftDoor2&lt;-Check the Second Door]]
@@ -72,7 +72,7 @@ There&#x27;s a number of rooms to the left and right along the corridor. There&#
 
 &lt;!-- hack to make twine map work
 [[SecondStoryDoorRelease1]]
---&gt;</tw-passagedata><tw-passagedata pid="12" name="SecondStoryLeftDoor1" tags="" position="660,743">(set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
+--&gt;</tw-passagedata><tw-passagedata pid="12" name="SecondStoryLeftDoor1" tags="" position="660,743">(if: not $supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
 
 While the majestic array of shimmering and sparkling clothes is extremely exciting, you decide after an indeterminate amount of time that you must tear yourself away from this wonder.
 
@@ -82,7 +82,10 @@ A fluorescent bulb dangles from the ceiling, occasionally flickering. The room l
 
 [[SecondStoryTableBody&lt;-Investigate the Table Body]]
 [[SecondStoryWallSkeleton&lt;-Investigate the Wall Skeleton]]
-[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="167,790"></tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="158,1073"></tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="151,1208"></tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="325,674">You move closer to investigate the body and gasp! It&#x27;s that person, your coworker who was both smart and had a large collection of shoes -- most of them stylish!
+[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="258,804"></tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="328,1086"></tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="161,980">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
+
+[[HazChemDoorExamine&lt;-Examine the Haz Chem Door]]
+[[SecondStoryCorridorLeft1&lt;-Head Back Along the Corridor]]</tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="325,674">You move closer to investigate the body and gasp! It&#x27;s that person, your coworker who was both smart and had a large collection of shoes -- most of them stylish!
 
 They look to be more recently killed than the nearby skeleton, on account of that they&#x27;re not yet a skeleton. There&#x27;s a number of rips and tears running the length of the torso from which the large sums of blood staining the table likely came from.
 
@@ -105,5 +108,14 @@ You&#x27;re unsure as the the cause of death, given that your degree is in molec
 
 You place the key in your key items pocket.
 
-[[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata></tw-storydata>
+[[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="161,1130">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
+
+[[HazChemKnock&lt;-Knock Politely]]
+[[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]</tw-passagedata><tw-passagedata pid="22" name="HazChemKnock" tags="" position="23,978">You knock gently on the door. The chilly metal under your knuckles reminds you of the hot summers you used to spend back on the farm, where you&#x27;d run across scorching corn fields, just to make it to cool of in a pile of cold and rusty farm equipment in the shade of the old elm tree.
+
+It seemed like a simpler time, a time where there was more time to think and sit with your thoughts, a time when it was clear what the right thing was, a time when you weren&#x27;t trapped in some sort of horrifying situation within an amazing story written by a brilliant and physically attractive individual.
+
+No one answers the door.
+
+[[HazChemDoorExamine&lt;-Ok]]</tw-passagedata></tw-storydata>
 
