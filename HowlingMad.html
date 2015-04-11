@@ -94,7 +94,13 @@ A fluorescent bulb dangles from the ceiling, occasionally flickering. The room l
 
 [[SecondStoryTableBody&lt;-Investigate the Table Body]]
 [[SecondStoryWallSkeleton&lt;-Investigate the Wall Skeleton]]
-[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="258,804"></tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="328,1086"></tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="161,980">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
+[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="258,804">(if: not $supplyCloset2Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset2Explored to true)You open the door to expose a well stocked supply closet. A wide expanse of those spray bottles that have window cleaner and stuff lie before you.
+
+The wondrous array of colors mystifies and hypnotizes you. You&#x27;re lost in a galaxy of crystalline color. Not even looking over all the cosmos could be so beautiful.
+
+You snap back to reality after an indeterminate amount of time. That was fun, but you suppose there is a task at hand.
+
+[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="328,1086"></tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="161,980">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
 
 [[HazChemDoorExamine&lt;-Examine the Haz Chem Door]]
 [[SecondStoryCorridorLeft1&lt;-Head Back Along the Corridor]]</tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="325,674">You move closer to investigate the body and gasp! It&#x27;s that person, your coworker who was both smart and had a large collection of shoes -- most of them stylish!
