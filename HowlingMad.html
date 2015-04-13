@@ -13,7 +13,9 @@
 <tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 </script><tw-passagedata pid="1" name="StartingDesk" tags="" position="800,400">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
@@ -134,14 +136,19 @@ You place the key in your key items pocket.
 
 [[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="161,1130">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
 
-[[HazChemKnock&lt;-Knock Politely]]
-[[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]</tw-passagedata><tw-passagedata pid="22" name="HazChemKnock" tags="" position="23,978">You knock gently on the door. The chilly metal under your knuckles reminds you of the hot summers you used to spend back on the farm, where you&#x27;d run across scorching corn fields, just to make it to cool of in a pile of cold and rusty farm equipment in the shade of the old elm tree.
+(if: $secondStoryTableBodyInvestigated)[(link-goto: &quot;Try to Unlock the Door with the Drink Me Key&quot;, &quot;HazChemDoorUnlock&quot;)
+][[HazChemKnock&lt;-Knock Politely]]
+[[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]
+
+&lt;!--
+[[HazChemDoorUnlock]]
+--&gt;</tw-passagedata><tw-passagedata pid="22" name="HazChemKnock" tags="" position="23,978">You knock gently on the door. The chilly metal under your knuckles reminds you of the hot summers you used to spend back on the farm, where you&#x27;d run across scorching corn fields, just to make it to cool of in a pile of cold and rusty farm equipment in the shade of the old elm tree.
 
 It seemed like a simpler time, a time where there was more time to think and sit with your thoughts, a time when it was clear what the right thing was, a time when you weren&#x27;t trapped in some sort of horrifying situation within an amazing story written by a brilliant and physically attractive individual.
 
 No one answers the door.
 
-[[HazChemDoorExamine&lt;-Ok]]</tw-passagedata></tw-storydata>
+[[HazChemDoorExamine&lt;-Ok]]</tw-passagedata><tw-passagedata pid="23" name="HazChemDoorUnlock" tags="" position="20,1128">The key jiggles into the lock, you leverage, it turns, there&#x27;s a click -- all those hours at unlocking doors with keys night classes are starting to pay off.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
