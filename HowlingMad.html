@@ -13,7 +13,11 @@
 <tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.3" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 </script><tw-passagedata pid="1" name="StartingDesk" tags="" position="800,400">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
@@ -102,16 +106,11 @@ The wondrous array of colors mystifies and hypnotizes you. You&#x27;re lost in a
 
 You snap back to reality after an indeterminate amount of time. That was fun, but you suppose there is a task at hand.
 
-[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="327,1088">The door opens into a bathroom, you&#x27;re not sure for which gender, or perhaps it&#x27;s a totally hip unisex bathroom, hard to know. There a couple of toilets and a couple of basins. (if: not $secondStoryBathroomTapOff)[One of the basins appears to have had the water left running. The water is pouring out through an overflow outlet near the top of the sink.](else:)[The tap that was running has now been turned off. The water still in the sink sits still, its youthful zest now gone, but perhaps still somewhere deep inside it still has that spark, that spark of greatness.]
+[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="328,1086">The door opens into a bathroom, you&#x27;re not sure for which gender, or perhaps it&#x27;s a totally hip unisex bathroom, hard to know. There a couple of toilets and a couple of basins. One of the basins appears to have had the water left running. The water is pouring out through an overflow outlet near the top of the sink.
 
-(if: not $secondStoryBathroomTapOff)[You gaze at the flowing water, so sanguine. That water knows how to be, so uninterrupted with the concerns of the world. Spinning through the universe at a speed determined by some point of reference -- you decide upon the center of the galaxy: about 490,000 miles an hour or so. Oh, to be that water for but a moment...
+It&#x27;s all moderately fascinating, but you don&#x27;t think you really need to go to the loo right now, and you really can&#x27;t be arsed turning the tap off.
 
-](if: not $secondStoryBathroomTapOff)[(set: $secondStoryBathroomTapOff to true)(link-goto: &quot;Turn Off the Tap&quot;, &quot;SecondStoryBathroomTapTurnOff&quot;)
-][[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]
-
-&lt;!--
-[[SecondStoryBathroomTapTurnOff]]
---&gt;</tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="161,980">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
+[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="161,980">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
 
 [[HazChemDoorExamine&lt;-Examine the Haz Chem Door]]
 [[SecondStoryCorridorLeft1&lt;-Head Back Along the Corridor]]</tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="325,674">You move closer to investigate the body and gasp! It&#x27;s that person, your coworker who was both smart and had a large collection of shoes -- most of them stylish!
@@ -139,20 +138,19 @@ You place the key in your key items pocket.
 
 [[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="161,1130">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
 
-[[HazChemKnock&lt;-Knock Politely]]
-[[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]</tw-passagedata><tw-passagedata pid="22" name="HazChemKnock" tags="" position="23,978">You knock gently on the door. The chilly metal under your knuckles reminds you of the hot summers you used to spend back on the farm, where you&#x27;d run across scorching corn fields, just to make it to cool of in a pile of cold and rusty farm equipment in the shade of the old elm tree.
+(if: $secondStoryTableBodyInvestigated)[(link-goto: &quot;Try to Unlock the Door with the Drink Me Key&quot;, &quot;HazChemDoorUnlock&quot;)
+][[HazChemKnock&lt;-Knock Politely]]
+[[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]
+
+&lt;!--
+[[HazChemDoorUnlock]]
+--&gt;</tw-passagedata><tw-passagedata pid="22" name="HazChemKnock" tags="" position="23,978">You knock gently on the door. The chilly metal under your knuckles reminds you of the hot summers you used to spend back on the farm, where you&#x27;d run across scorching corn fields, just to make it to cool of in a pile of cold and rusty farm equipment in the shade of the old elm tree.
 
 It seemed like a simpler time, a time where there was more time to think and sit with your thoughts, a time when it was clear what the right thing was, a time when you weren&#x27;t trapped in some sort of horrifying situation within an amazing story written by a brilliant and physically attractive individual.
 
 No one answers the door.
 
-[[HazChemDoorExamine&lt;-Ok]]</tw-passagedata><tw-passagedata pid="23" name="SecondStoryBathroomTapTurnOff" tags="" position="328,1213">With a mournful sigh you decide that the water can&#x27;t keep behaving like this. It&#x27;s taunting you, mocking you, that it can be so joyous, so free, even at a time like this? Well we&#x27;ll see, we&#x27;ll see how well you do when the valve that breaths your life is twisted shut.
-
-You move forward, and with a quick twist you snuff the tap closed. The water no longer flows, you feel a rush of relief crash against an opposing rush of guilt. Perhaps that was an immoral story decision that will catch up to you come the climatic scene? Or perhaps the outcome of the story is largely static and that only the illusion of choice exists?
-
-You shake your head, there&#x27;s no time to consider such quandaries, there&#x27;s a text based adventure at hand!
-
-[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata></tw-storydata>
+[[HazChemDoorExamine&lt;-Ok]]</tw-passagedata><tw-passagedata pid="23" name="HazChemDoorUnlock" tags="" position="20,1128">The key jiggles into the lock, you leverage, it turns, there&#x27;s a click -- all those hours at unlocking doors with keys night classes are starting to pay off.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
