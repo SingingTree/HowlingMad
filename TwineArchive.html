@@ -1,4 +1,5 @@
-<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.5" ifid="87CEB325-113D-4EBE-BBA3-8E4C7FF5A6B5" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.6" ifid="87CEB325-113D-4EBE-BBA3-8E4C7FF5A6B5" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
 
 
 
@@ -6,6 +7,7 @@
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -98,11 +100,11 @@ The wondrous array of colors mystifies and hypnotizes you. You&#x27;re lost in a
 
 You snap back to reality after an indeterminate amount of time. That was fun, but you suppose there is a task at hand.
 
-[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="359,1117">The door opens into a bathroom, you&#x27;re not sure for which gender, or perhaps it&#x27;s a totally hip unisex bathroom, hard to know. There a couple of toilets and a couple of basins. One of the basins appears to have had the water left running. The water is pouring out through an overflow outlet near the top of the sink.
+[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="15" name="SecondStoryLeftDoor4" tags="" position="385,1117">The door opens into a bathroom, you&#x27;re not sure for which gender, or perhaps it&#x27;s a totally hip unisex bathroom, hard to know. There a couple of toilets and a couple of basins. One of the basins appears to have had the water left running. The water is pouring out through an overflow outlet near the top of the sink.
 
 It&#x27;s all moderately fascinating, but you don&#x27;t think you really need to go to the loo right now, and you really can&#x27;t be arsed turning the tap off.
 
-[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="240,979">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
+[[SecondStoryCorridorLeft1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="16" name="SecondStoryCorridorLeft2" tags="" position="270,969">Further down the left corridor you find a couple more doors. Of particular note is a door at the end of the corridor marked with a hazardous chemical symbol.
 
 [[HazChemDoorExamine&lt;-Examine the Haz Chem Door]]
 [[SecondStoryCorridorLeft1&lt;-Head Back Along the Corridor]]</tw-passagedata><tw-passagedata pid="17" name="SecondStoryTableBody" tags="" position="325,674">You move closer to investigate the body and gasp! It&#x27;s that person, your coworker who was both smart and had a large collection of shoes -- most of them stylish!
@@ -128,14 +130,17 @@ You&#x27;re unsure as the the cause of death, given that your degree is in molec
 
 You place the key in your key items pocket.
 
-[[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="250.00070000000002,1144">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
+[[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="257,1142">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
+(if: $haveKeyItemBeaker)[
+However, you realise you&#x27;ve already obtained the key item from the haz chem room, and you refuse to explore it again. You just can&#x27;t bring yourself to.
+]
+(if: $secondStoryTableBodyInvestigated &amp;&amp; not $haveKeyItemBeaker)[(link-goto: &quot;Try to Unlock the Door with the Drink Me Key&quot;, &quot;HazChemDoorUnlock&quot;)
+](if: not $haveKeyItemBeaker)[(link-goto: &quot;Kock Gently&quot;, &quot;HazChemKnock&quot;)
+][[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]
 
-(if: $secondStoryTableBodyInvestigated)[(link-goto: &quot;Try to Unlock the Door with the Drink Me Key&quot;, &quot;HazChemDoorUnlock&quot;)
-][[HazChemKnock&lt;-Knock Politely]]
-[[SecondStoryCorridorLeft2&lt;-Turn Back to the Corridor]]
-
-&lt;!--
+&lt;!-- Hacks to make the map editor look nice
 [[HazChemDoorUnlock]]
+[[HazChemKnock]]
 --&gt;</tw-passagedata><tw-passagedata pid="22" name="HazChemKnock" tags="" position="269,1281">You knock gently on the door. The chilly metal under your knuckles reminds you of the hot summers you used to spend back on the farm, where you&#x27;d run across scorching corn fields, just to make it to cool of in a pile of cold and rusty farm equipment in the shade of the old elm tree.
 
 It seemed like a simpler time, a time where there was more time to think and sit with your thoughts, a time when it was clear what the right thing was, a time when you weren&#x27;t trapped in some sort of horrifying situation within an amazing story written by a brilliant and physically attractive individual.
@@ -143,7 +148,7 @@ It seemed like a simpler time, a time where there was more time to think and sit
 No one answers the door.
 
 [[HazChemDoorExamine&lt;-Ok]]
-[[HazChemWhisper&lt;-Whisper Softly at the Door to Unlock]]</tw-passagedata><tw-passagedata pid="23" name="HazChemDoorUnlock" tags="" position="125.0002,981">The key jiggles into the lock, you leverage, it turns, there&#x27;s a click -- all those hours at unlocking doors with keys night classes are starting to pay off.
+[[HazChemWhisper&lt;-Whisper Softly at the Door to Unlock]]</tw-passagedata><tw-passagedata pid="23" name="HazChemDoorUnlock" tags="" position="125,981">The key jiggles into the lock, you leverage, it turns, there&#x27;s a click -- all those hours at unlocking doors with keys night classes are starting to pay off.
 
 [[HazChemRoom&lt;-Enter the Room]]</tw-passagedata><tw-passagedata pid="24" name="HazChemRoom" tags="" position="125,1146">You enter the room to find a prosperous assortment of shelves stacked to their shelf brims with assortments of containers. The containers probably contain hazardous chemicals. This means they&#x27;re all almost certainly highly acidic, radioactive, explosive bases.
 
@@ -161,7 +166,9 @@ Through your lips a sensual whisper slides: &quot;Could you please open? I don&#
 With a mechanical exhalation the door clicks, softly, slowly. You and the door both know it is now open.
 
 [[HazChemRoom&lt;-Enter the Room]]
-</tw-passagedata><tw-passagedata pid="26" name="TakeKeyItemBeaker" tags="" position="0,1029">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1275">No really, I insist you take the beaker.
+</tw-passagedata><tw-passagedata pid="26" name="TakeKeyItemBeaker" tags="" position="0,1029">(set: $haveKeyItemBeaker to true)You take the key item beaker, it&#x27;s automatically placed in your inventory. Moving your cursor over it in your inventory there&#x27;s a note that it appears extremely corrosive, but you&#x27;re not further able to interact with it. It&#x27;s probably waiting for some important story event.
+
+[[SecondStoryCorridorLeft2&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1275">No really, I insist you take the beaker.
 
 [[TakeKeyItemBeaker&lt;-Take the Beaker]]
 (if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata></tw-storydata>
