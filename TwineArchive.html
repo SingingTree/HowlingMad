@@ -6,7 +6,9 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -60,11 +62,19 @@ The lights flicker.
 
 [[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1169,957"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="455,982">You move into the corridor to the left of this story&#x27;s entrance. The first door along the corridor is closed, the second is open with light filing out of it, a third and fourth are also closed, with the corridor then flowing into a bend.
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1169,957">Moving down the corridor towards you note a number of doors. A couple of the doors sit ajar on the left, light ebbing from their frames. There is another on the right, closed and windowless.
 
-[[SecondStoryLeftDoor1&lt;-Check the First Door]]
+The corridor continues onwards with a 90 degree turn to the to left.
+
+[[SecondStoryRightDoor1&lt;-Check the First Door on the Left]]
+[[SecondStoryRightDoor2&lt;-Check the Second Door on the Left]]
+[[SupplyCloset3&lt;-Check the Door on the Right]]
+[[SecondStoryCorridorRight2&lt;-Continue Along the Corridor]]
+[[SecondStoryCorridor1&lt;-Go Back to the Middle of the Corridor]]</tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="455,982">You move into the corridor to the left of this story&#x27;s entrance. The first door along the corridor is closed, the second is open with light filing out of it, a third and fourth are also closed, with the corridor then flowing into a bend to the right.
+
+[[SupplyCloset1&lt;-Check the First Door]]
 [[SecondStoryLeftDoor2&lt;-Check the Second Door]]
-[[SecondStoryLeftDoor3&lt;-Check the Third Door]]
+[[SupplyCloset2&lt;-Check the Third Door]]
 [[SecondStoryLeftDoor4&lt;-Check the Fourth Door]]
 [[SecondStoryCorridorLeft2&lt;-Continue Along the Corridor]]
 [[SecondStoryCorridor1&lt;-Go Back to the Middle of the Corridor]]</tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
@@ -84,7 +94,7 @@ There&#x27;s a number of rooms to the left and right along the corridor. There&#
 
 &lt;!-- hack to make twine map work
 [[SecondStoryDoorRelease1]]
---&gt;</tw-passagedata><tw-passagedata pid="12" name="SecondStoryLeftDoor1" tags="" position="660,743">(if: not $supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
+--&gt;</tw-passagedata><tw-passagedata pid="12" name="SupplyCloset1" tags="" position="659,743">(if: not $supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
 
 While the majestic array of shimmering and sparkling clothes is extremely exciting, you decide after an indeterminate amount of time that you must tear yourself away from this wonder.
 
@@ -94,7 +104,7 @@ A fluorescent bulb dangles from the ceiling, occasionally flickering. The room l
 
 [[SecondStoryTableBody&lt;-Investigate the Table Body]]
 [[SecondStoryWallSkeleton&lt;-Investigate the Wall Skeleton]]
-[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="258,804">(if: not $supplyCloset2Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset2Explored to true)You open the door to expose a well stocked supply closet. A wide expanse of those spray bottles that have window cleaner and stuff lie before you.
+[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SupplyCloset2" tags="" position="258,805">(if: not $supplyCloset2Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset2Explored to true)You open the door to expose a well stocked supply closet. A wide expanse of those spray bottles that have window cleaner and stuff lie before you.
 
 The wondrous array of colors mystifies and hypnotizes you. You&#x27;re lost in a galaxy of crystalline color. Not even looking over all the cosmos could be so beautiful.
 
@@ -128,7 +138,7 @@ You&#x27;re unsure as the the cause of death, given that your degree is in molec
 
 [[SecondStoryWallSkeleton&lt;-Er, okay]]</tw-passagedata><tw-passagedata pid="20" name="SecondStoryTableBodyInvestigate" tags="" position="330,549">Unceremonious rummaging through and around the corpse reveals a key with a small label attached to it. The label reads &quot;Drink Me&quot;, you move the key towards your mouth, you feel the metallic taste upon your lips, and then you think better of taking advice from strange labels you don&#x27;t know.
 
-You place the key in your key items pocket.
+You place the key in your key items pocket.(if: $haveKeyItemBeaker is true)[ You look mournfully upon it knowing now that your quest has been performed out of order -- having already been to the haz chem room. The key will forever haunt you, sitting unused in your pocket.]
 
 [[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="257,1142">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
 (if: $haveKeyItemBeaker)[
@@ -171,5 +181,5 @@ With a mechanical exhalation the door clicks, softly, slowly. You and the door b
 [[SecondStoryCorridorLeft2&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1275">No really, I insist you take the beaker.
 
 [[TakeKeyItemBeaker&lt;-Take the Beaker]]
-(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata></tw-storydata>
+(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata><tw-passagedata pid="28" name="SecondStoryRightDoor1" tags="" position="1169,1107">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="SecondStoryRightDoor2" tags="" position="1319,1107">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="SupplyCloset3" tags="" position="1042,783">(if: not $supplyCloset3Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset3Explored to true)</tw-passagedata><tw-passagedata pid="31" name="SecondStoryCorridorRight2" tags="" position="1366,958">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
