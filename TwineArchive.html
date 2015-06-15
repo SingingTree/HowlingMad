@@ -7,7 +7,9 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -181,5 +183,15 @@ With a mechanical exhalation the door clicks, softly, slowly. You and the door b
 [[SecondStoryCorridorLeft2&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1275">No really, I insist you take the beaker.
 
 [[TakeKeyItemBeaker&lt;-Take the Beaker]]
-(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata><tw-passagedata pid="28" name="SecondStoryRightDoor1" tags="" position="1169,1107">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="SecondStoryRightDoor2" tags="" position="1319,1107">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="SupplyCloset3" tags="" position="1042,783">(if: not $supplyCloset3Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset3Explored to true)</tw-passagedata><tw-passagedata pid="31" name="SecondStoryCorridorRight2" tags="" position="1366,958">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata><tw-passagedata pid="28" name="SecondStoryRightDoor1" tags="" position="1169,1107">The doors creeks open, it would be eerie, but you&#x27;re feeling decidedly positive about how this passage is going to pan out, so it doesn&#x27;t bother you.
+
+The room is brightly lit, mirroring your sunny dispoition. File cabinets flank you along both the walls, and at the back of the room sits a desk. Upon the desk sit a number of neatly stacked papers. There are a number of effects around the office that give the impression this is a location used for very important, bureaucratic business, and it is used well.
+
+[[SecondStoryCorridorRight1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="29" name="SecondStoryRightDoor2" tags="" position="1319,1107">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="SupplyCloset3" tags="" position="1042,783">(if: not $supplyCloset3Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset3Explored to true)Behind the door stands a wonderous allotment of exquisite mops. Their lithe bodies stand coyly, whilst their heads stand prodly, each with its own set of graceful and luscious strings.
+
+You stand, entralled, your mind wandering: if only this were some sort of animated film aimed at the younger demographic, but certainly enjoyable for the whole family, and with a not insubstantial collection of cult adult fans. The mops would be sentient, and you could dance with them forever through these corridors. These halls would not be your prison, but a sanctum from the outer world, which could never compare to the joy of dancing with so many glorious mops. A world with only their soft swishing, and your endless laughter.
+
+A sigh escapes your lips, alas, that is not this world. But one day you hope it might be a world future generations can live in.
+
+[[SecondStoryCorridorRight1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="31" name="SecondStoryCorridorRight2" tags="" position="1366,958">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
