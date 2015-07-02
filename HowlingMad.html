@@ -18,7 +18,23 @@
 
 
 
+
+
+
+
+
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+
 
 
 
@@ -52,7 +68,7 @@ You glance out the window of your ultra-mansion. You have it all, except one thi
 
 (text-style: &quot;bold&quot;)[The End]</tw-passagedata><tw-passagedata pid="4" name="Stairwell" tags="" position="800,700">There&#x27;s a beep as you press the release for the magnetic lock on the door to the stairwell. You step into the stairwell, the noise from the upper floors ever so louder in here.
 
-You begin ascending the stairs as the door you entered through thuds back into place and the locks reengage. You drudge up the rest stairwell and arrive at the set of doors opening onto the second story.
+You begin ascending the stairs as the door you entered through thuds back into place and the locks re-engage. You drudge up the rest stairwell and arrive at the set of doors opening onto the second story.
 
 Peering through the thin strip of window in the door you can&#x27;t make out much. It looks light the in the corridor the door opens into is off, but some of the lights in the adjoining rooms are bleeding into it. As far as you can tell there&#x27;s nothing much going on in the hallway.
 
@@ -72,11 +88,19 @@ The lights flicker.
 
 [[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
 [[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1169,957"></tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="455,982">You move into the corridor to the left of this story&#x27;s entrance. The first door along the corridor is closed, the second is open with light filing out of it, a third and fourth are also closed, with the corridor then flowing into a bend.
+[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1169,957">Moving down the corridor towards you note a number of doors. A couple of the doors sit ajar on the left, light ebbing from their frames. There is another on the right, closed and windowless.
 
-[[SecondStoryLeftDoor1&lt;-Check the First Door]]
+The corridor continues onwards with a 90 degree turn to the to left.
+
+[[SecondStoryRightDoor1&lt;-Check the First Door on the Left]]
+[[SecondStoryRightDoor2&lt;-Check the Second Door on the Left]]
+[[SupplyCloset3&lt;-Check the Door on the Right]]
+[[SecondStoryCorridorRight2&lt;-Continue Along the Corridor]]
+[[SecondStoryCorridor1&lt;-Go Back to the Middle of the Corridor]]</tw-passagedata><tw-passagedata pid="8" name="SecondStoryCorridorLeft1" tags="" position="455,982">You move into the corridor to the left of this story&#x27;s entrance. The first door along the corridor is closed, the second is open with light filing out of it, a third and fourth are also closed, with the corridor then flowing into a bend to the right.
+
+[[SupplyCloset1&lt;-Check the First Door]]
 [[SecondStoryLeftDoor2&lt;-Check the Second Door]]
-[[SecondStoryLeftDoor3&lt;-Check the Third Door]]
+[[SupplyCloset2&lt;-Check the Third Door]]
 [[SecondStoryLeftDoor4&lt;-Check the Fourth Door]]
 [[SecondStoryCorridorLeft2&lt;-Continue Along the Corridor]]
 [[SecondStoryCorridor1&lt;-Go Back to the Middle of the Corridor]]</tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
@@ -96,7 +120,7 @@ There&#x27;s a number of rooms to the left and right along the corridor. There&#
 
 &lt;!-- hack to make twine map work
 [[SecondStoryDoorRelease1]]
---&gt;</tw-passagedata><tw-passagedata pid="12" name="SecondStoryLeftDoor1" tags="" position="660,743">(if: not $supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
+--&gt;</tw-passagedata><tw-passagedata pid="12" name="SupplyCloset1" tags="" position="659,743">(if: not $supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
 
 While the majestic array of shimmering and sparkling clothes is extremely exciting, you decide after an indeterminate amount of time that you must tear yourself away from this wonder.
 
@@ -106,7 +130,7 @@ A fluorescent bulb dangles from the ceiling, occasionally flickering. The room l
 
 [[SecondStoryTableBody&lt;-Investigate the Table Body]]
 [[SecondStoryWallSkeleton&lt;-Investigate the Wall Skeleton]]
-[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SecondStoryLeftDoor3" tags="" position="258,804">(if: not $supplyCloset2Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset2Explored to true)You open the door to expose a well stocked supply closet. A wide expanse of those spray bottles that have window cleaner and stuff lie before you.
+[[SecondStoryCorridorLeft1&lt;-Depart the Room]]</tw-passagedata><tw-passagedata pid="14" name="SupplyCloset2" tags="" position="258,805">(if: not $supplyCloset2Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset2Explored to true)You open the door to expose a well stocked supply closet. A wide expanse of those spray bottles that have window cleaner and stuff lie before you.
 
 The wondrous array of colors mystifies and hypnotizes you. You&#x27;re lost in a galaxy of crystalline color. Not even looking over all the cosmos could be so beautiful.
 
@@ -140,7 +164,7 @@ You&#x27;re unsure as the the cause of death, given that your degree is in molec
 
 [[SecondStoryWallSkeleton&lt;-Er, okay]]</tw-passagedata><tw-passagedata pid="20" name="SecondStoryTableBodyInvestigate" tags="" position="330,549">Unceremonious rummaging through and around the corpse reveals a key with a small label attached to it. The label reads &quot;Drink Me&quot;, you move the key towards your mouth, you feel the metallic taste upon your lips, and then you think better of taking advice from strange labels you don&#x27;t know.
 
-You place the key in your key items pocket.
+You place the key in your key items pocket.(if: $haveKeyItemBeaker is true)[ You look mournfully upon it knowing now that your quest has been performed out of order -- having already been to the haz chem room. The key will forever haunt you, sitting unused in your pocket.]
 
 [[SecondStoryLeftDoor2&lt;-Good Investigation, Back to the Room]]</tw-passagedata><tw-passagedata pid="21" name="HazChemDoorExamine" tags="" position="257,1142">A large door stands in front of you, it looks solid, metal, and story relevant, a large hazardous chemicals symbol is imbued upon it.
 (if: $haveKeyItemBeaker)[
@@ -166,7 +190,7 @@ No one answers the door.
 
 You notice one particular beaker, it shimmers and glows, illuminated as a key item by the game&#x27;s graphics subsystem.
 
-You move your aiming recticle around the room. You examine beaker after beaker while mashing your interact key, however none are interacted with. Despite the &#x27;realism&#x27; that the box quotes for the game promised, you can&#x27;t help but feel a bit let down.
+You move your aiming reticle around the room. You examine beaker after beaker while mashing your interact key, however none are interacted with. Despite the &#x27;realism&#x27; that the box quotes for the game promised, you can&#x27;t help but feel a bit let down.
 
 You turn your attention back to the key item beaker.
 
@@ -183,7 +207,45 @@ With a mechanical exhalation the door clicks, softly, slowly. You and the door b
 [[SecondStoryCorridorLeft2&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1275">No really, I insist you take the beaker.
 
 [[TakeKeyItemBeaker&lt;-Take the Beaker]]
-(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata></tw-storydata>
+(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata><tw-passagedata pid="28" name="SecondStoryRightDoor1" tags="" position="1169,1107">The door creeks open, it would be eerie, but you&#x27;re feeling decidedly positive about how this passage is going to pan out, so it doesn&#x27;t bother you.
+
+The room is brightly lit, mirroring your sunny disposition. File cabinets flank you along both the walls, and at the back of the room sits a desk. Upon the desk sit a number of neatly stacked papers. There are a number of effects around the office that give the impression this is a location used for very important, bureaucratic business, and it is used well.
+
+[[SecondStoryLeftPaperStack&lt;-Examine the Stack of Papers on the Left of the Desk]]
+[[SecondStoryRightPaperStack&lt;-Examine the Stack of Papers on the Right of the Desk]]
+[[SecondStoryCorridorRight1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="29" name="SecondStoryRightDoor2" tags="" position="1319,1107">You enter what appears to be a copy room. There is an impressive looking photo copier, with an inexplicable number of inputs and outputs. Positioned along the wall near the copier are a collection of boxes full of what you presume to be paper, based on the labelling of the boxes.
+
+There also a large draw-cupboard thing. You wonder what the appropriate name for it is. It consists of a series of draws on the far ends, with a couple of cupboards sandwiched inbetween. Given your already established presumptious nature, you presume the unit is used to store stationary and office supplies.
+
+[[SecondStoryPaperStacksInvestigate&lt;-Investigate the Allegid Paper Stacks]]
+[[SecondStoryCopierInvestigate&lt;-Investigate the Copier]]
+[[SecondStoryStationaryCupboardInvestigate&lt;-Investigate the Draw-Cupboard Thing]]</tw-passagedata><tw-passagedata pid="30" name="SupplyCloset3" tags="" position="1042,783">(if: not $supplyCloset3Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset3Explored to true)Behind the door stands a wondrous allotment of exquisite mops. Their lithe bodies stand coyly, whilst their heads sit proudly, each with its own set of graceful and luscious strings.
+
+You stand, enthralled, your mind wandering: if only this were some sort of animated film aimed at the younger demographic, but certainly enjoyable for the whole family, and with a not insubstantial collection of cult adult fans. The mops would be sentient, and you could dance with them forever through these corridors. These halls would not be your prison, but a sanctum from the outer world, which could never compare to the joy of dancing with so many glorious mops. A world with only their soft swishing, and your endless laughter.
+
+A sigh escapes your lips, alas, that is not this world. But one day you hope it might be a world future generations can live in.
+
+[[SecondStoryCorridorRight1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="31" name="SecondStoryCorridorRight2" tags="" position="1366,958">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="SecondStoryLeftPaperStack" tags="" position="980,1250">The left hand stack of papers seems initially shocking, a number of pages have comically misleading titles that when partially revealed appear shocking, but upon further inspection are quite reasonable. You have yourself a small chuckle.
+
+Chuckles withstanding, this is a serious business, so you resume leafing through the papers. There&#x27;s a few discepencies here and there: maroon ink used instead of red, dark blue instead of black, signatures not written in the correct ISO format, irregular paper depth. You sigh longingly, those crazy days and nights working at the patent office sure were wild, and though you can never go back, you will always remember them fondly.
+
+You finish examining the papers. Nothing of note here. Just a wistful trip down memory lane, each stone on the lane a bitter-sweet hard candy, the harder you try to suck it, the more it resists relinquishing its flavour, and if you should try to chew it, oh heavens.
+
+[[SecondStoryRightPaperStack&lt;-Examine the Right Paper Stack]]
+[[SecondStoryCorridorRight1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="33" name="SecondStoryRightPaperStack" tags="" position="1132,1248">Rifling through the papers you find a number of forms. It all seems pretty uniform: a filing for a tax avoidance return, registration for the local building and dog owners organisation, an order bulk order for that candy bar with the peanuts and caramel that&#x27;s used to pay protection to the vermin that live in the building.
+
+But what&#x27;s this!? The form detailing this years exorcism? It looks like the building manager only paid for a generic brand exorcism! Your hands shake, you break out in a cold sweat, dread creeps up your spine, and your legs go weak.
+(if: $awareOfGenericExorcism is true)[
+You realise you probably shouldn&#x27;t be this shocked about all this, given that it&#x27;s not the first time your discovering this information. But given the gravity of the twist and this whole situation, it&#x27;s hard not to be!
+]
+(set: $awareOfGenericExorcism to true)Your once sunny disposition now as dark as a coal mine in the middle of the night during an eclipse being viewed through a welding mask. However, you know you must press onwards despite these gruelling revelations. You adjust your shoulder, flex your hands, and square you jaw in preperation for the following decision:
+
+[[SecondStoryLeftPaperStack&lt;-Examine the Left Paper Stack]]
+[[SecondStoryCorridorRight1&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="34" name="SecondStoryPaperStacksInvestigate" tags="" position="1319,1257">You move closer to the paper boxes which are allegded to contain paper. Boxes staacked atop of one another, each containing sheets of paper stack atop one another. Reminds you of high school stacking classes: &#x27;if you had 4 stacks of bags, each containing 5 stacks of envelopes, and each envelope contained a stack of of 6 pieces of origami paper, after making that origami paper in swans, how many swans would you have to stack?&#x27;
+
+Sadly due to the popularity of stacking as a subject, even those leaving university with high marks in an advanced degree in stacking weren&#x27;t assured a job. You sigh, sometimes the weight of the world is a lot, even if it&#x27;s not only yours to bear.
+
+[[SecondStoryPaperStacksInvestigateForReal&lt;-Aren&#x27;t I Supposed to Be Investigating those Stacks?]]</tw-passagedata><tw-passagedata pid="35" name="SecondStoryCopierInvestigate" tags="" position="1469,1257">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="36" name="SecondStoryStationaryCupboardInvestigate" tags="" position="1619,1257">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="SecondStoryPaperStacksInvestigateForReal" tags="" position="1319,1407">You realise you&#x27;ve been failing to fufil your investigative obligations and move closer to the stacks of boxes of stacks of paper.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
