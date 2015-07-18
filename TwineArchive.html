@@ -1,4 +1,6 @@
-<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.6" ifid="87CEB325-113D-4EBE-BBA3-8E4C7FF5A6B5" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.8" ifid="87CEB325-113D-4EBE-BBA3-8E4C7FF5A6B5" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
 
 
 
@@ -28,17 +30,21 @@
 
 
 
+
+
 </script><tw-passagedata pid="1" name="StartingDesk" tags="" position="800,400">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
 
 It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise from the upper floors of the building growing ever more unbearable.
 
-(if: $startingDeskHours &lt; 24)[(set: $startingDeskHours to $startingDeskHours + 1)(link-goto: &quot;Stay at Your Desk&quot;, &quot;StartingDesk&quot;)](else:)[(link-goto: &quot;Stay at Your Desk&quot;, &quot;StartingDeskEnding&quot;)]
-[[First Floor Hallway&lt;-Finally Go Investigate The Noise]]
-
-&lt;!-- Hacks to make the map editor look nice
-[[StartingDeskEnding]]
-[[StartingDesk]]
---&gt;</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="800,550">You stride down the hallway towards the stairwell. You&#x27;re ready to investigate! As you journey you find yourself musing expositionally.
+{
+(if: $startingDeskHours &lt; 24)[
+(set: $startingDeskHours to $startingDeskHours + 1)
+[[Stay at Your Desk-&gt;StartingDesk]]
+](else:)[
+[[Stay at Your Desk-&gt;StartingDeskEnding]]
+]
+}
+[[First Floor Hallway&lt;-Finally Go Investigate The Noise]]</tw-passagedata><tw-passagedata pid="2" name="First Floor Hallway" tags="" position="800,550">You stride down the hallway towards the stairwell. You&#x27;re ready to investigate! As you journey you find yourself musing expositionally.
 
 It hasn&#x27;t been that long since you moved into this new building. The company was looking for somewhere to expand to, and this seemed like the perfect location: 3 floors and a kitchenette on each, already wired with fibre, and the exorcism for this year had already been completed.
 
