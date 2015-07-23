@@ -32,7 +32,7 @@
 
 
 
-</script><tw-passagedata pid="1" name="StartingDesk" tags="" position="800,400">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
+</script><tw-passagedata pid="1" name="StartingDesk" tags="" position="800,399">You sit, your work station in front of you. The screen is blurry through your tired eyes. Your head throbs, your concentration ebbs as the pain grows.
 
 It feels as though you&#x27;ve been here for $startingDeskHours hours. The noise from the upper floors of the building growing ever more unbearable.
 
@@ -71,9 +71,9 @@ Peering through the thin strip of window in the door you can&#x27;t make out muc
 
 There&#x27;s a musky, somewhat unpleasant smell to the air. Seems like people aren&#x27;t taking care of the place all that well while it&#x27;s being renovated.
 
-[[SecondStoryLightCheck&lt;-Check for a Light Switch]]
-[[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="800,965">{
+[[Check for a Light Switch-&gt;SecondStoryLightCheck]]
+[[Investigate to the Right-&gt;SecondStoryCorridorRight1]]
+[[Investigate to the Left-&gt;SecondStoryCorridorLeft1]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="800,965">{
 (set: $secondStoryCorridorLights to true)
 }You slide your hand along the wall and after a small amount of searching it runs over the tell tale bump of a light switch. With a soft click the lights flicker on.
 
@@ -83,9 +83,9 @@ Compounding the shock is that where the door release should be there is a set of
 
 The lights flicker.
 
-[[SecondStoryDoorRelease1&lt;-Check the Door Release Wires]]
-[[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1169,957">Moving down the corridor towards you note a number of doors. A couple of the doors sit ajar on the left, light ebbing from their frames. There is another on the right, closed and windowless.
+[[Check the Door Release Wires-&gt;SecondStoryDoorRelease1]]
+[[Investigate to the Right-&gt;SecondStoryCorridorRight1]]
+[[Investigate to the Left-&gt;SecondStoryCorridorLeft1]]</tw-passagedata><tw-passagedata pid="7" name="SecondStoryCorridorRight1" tags="" position="1169,957">Moving down the corridor towards you note a number of doors. A couple of the doors sit ajar on the left, light ebbing from their frames. There is another on the right, closed and windowless.
 
 The corridor continues onwards with a 90 degree turn to the to left.
 
@@ -102,18 +102,18 @@ The corridor continues onwards with a 90 degree turn to the to left.
 [[SecondStoryCorridorLeft2&lt;-Continue Along the Corridor]]
 [[SecondStoryCorridor1&lt;-Go Back to the Middle of the Corridor]]</tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
 
-[[SecondStoryWireTouch&lt;-Reunite the Wires with One Another]]
-[[SecondStoryCorridor1&lt;-Leave the Wires Alone]]</tw-passagedata><tw-passagedata pid="10" name="SecondStoryWireTouch" tags="" position="925,1075">(set: $secondStoryDoorShocked to true)As you press the wires into a loving embrace they burst into an electric celebration. The lights in the corridor flicker more violently in jubilation. It is as if your body is comprised entirely of tongues, each licking a 9 volt battery (specifically a transistor battery).
+[[Reunite the Wires with One Another-&gt;SecondStoryWireTouch]]
+[[Leave the Wires Alone-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="10" name="SecondStoryWireTouch" tags="" position="925,1075">(set: $secondStoryDoorShocked to true)As you press the wires into a loving embrace they burst into an electric celebration. The lights in the corridor flicker more violently in jubilation. It is as if your body is comprised entirely of tongues, each licking a 9 volt battery (specifically a transistor battery).
 
 You wake on the floor, the lights in the corridor still appear to be working. You look over at the wires, they appear to have somehow been parted again. They look back at you, and you now know them for what they truly are: imbued with malevolent sentience. You decide it best not to interact with them if they&#x27;re gonna be like this.
 
-[[SecondStoryCorridor1&lt;-Get Up]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="802,1301">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked)[The door release wires glower at you.]
+[[Get Up-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="802,1301">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked)[The door release wires glower at you.]
 
 There&#x27;s a number of rooms to the left and right along the corridor. There&#x27;s a single room with light flowing from it to your left, and two on the right.
 
 (if: $secondStoryCorridorLights &amp;&amp; !$secondStoryDoorShocked)[[[Check the Door Release Wires-&gt;SecondStoryDoorRelease1]]
-][[SecondStoryCorridorRight1&lt;-Investigate to the Right]]
-[[SecondStoryCorridorLeft1&lt;-Investigate to the Left]]
+][[Investigate to the Right-&gt;SecondStoryCorridorRight1]]
+[[Investigate to the Left-&gt;SecondStoryCorridorLeft1]]
 </tw-passagedata><tw-passagedata pid="12" name="SupplyCloset1" tags="" position="659,743">(if: not $supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
 
 While the majestic array of shimmering and sparkling clothes is extremely exciting, you decide after an indeterminate amount of time that you must tear yourself away from this wonder.
