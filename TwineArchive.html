@@ -104,15 +104,16 @@ The corridor continues onwards with a 90 degree turn to the to left.
 [[Go Back to the Middle of the Corridor-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="9" name="SecondStoryDoorRelease1" tags="" position="800,1100">Two wires jut helplessly from the wall. Each has a coloured sheath, the colours of which have no bearing on the story, so you pay no attention to them.
 
 [[Reunite the Wires with One Another-&gt;SecondStoryWireTouch]]
-[[Leave the Wires Alone-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="10" name="SecondStoryWireTouch" tags="" position="925,1075">(set: $secondStoryDoorShocked to true)As you press the wires into a loving embrace they burst into an electric celebration. The lights in the corridor flicker more violently in jubilation. It is as if your body is comprised entirely of tongues, each licking a 9 volt battery (specifically a transistor battery).
+[[Leave the Wires Alone-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="10" name="SecondStoryWireTouch" tags="" position="957,1068">(set: $secondStoryDoorShocked to true)As you press the wires into a loving embrace they burst into an electric celebration. The lights in the corridor flicker more violently in jubilation. It is as if your body is comprised entirely of tongues, each licking a 9 volt battery (specifically a transistor battery).
 
 You wake on the floor, the lights in the corridor still appear to be working. You look over at the wires, they appear to have somehow been parted again. They look back at you, and you now know them for what they truly are: imbued with malevolent sentience. You decide it best not to interact with them if they&#x27;re gonna be like this.
 
-[[Get Up-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="802,1301">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked is !0)[The door release wires glower at you.]
+[[Get Up-&gt;SecondStoryCorridor1]]</tw-passagedata><tw-passagedata pid="11" name="SecondStoryCorridor1" tags="" position="658,1369">You&#x27;re standing in a corridor just outside the stairwell doors on the second story. (if: $secondStoryDoorShocked is !0)[The door release wires glower at you.]
 
 There&#x27;s a number of rooms to the left and right along the corridor. There&#x27;s a single room with light flowing from it to your left, and two on the right.
 
 (if: $secondStoryCorridorLights is !0 &amp;&amp; !$secondStoryDoorShocked)[[[Check the Door Release Wires-&gt;SecondStoryDoorRelease1]]
+](elseif: !$secondStoryCorridorLights)[[[Check for a Light Switch-&gt;SecondStoryLightCheck]]
 ][[Investigate to the Right-&gt;SecondStoryCorridorRight1]]
 [[Investigate to the Left-&gt;SecondStoryCorridorLeft1]]
 </tw-passagedata><tw-passagedata pid="12" name="SupplyCloset1" tags="" position="659,743">(if: !$supplyCloset1Explored)[(set: $supplyClosetsExplored to $supplyClosetsExplored + 1)](set: $supplyCloset1Explored to true)The door opens into what appears to be a janitorial closet. There&#x27;s an expansive collection of clothes that you can only assume are used to clean things.
