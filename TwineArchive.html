@@ -170,10 +170,10 @@ It seemed like a simpler time, a time where there was more time to think and sit
 
 No one answers the door.
 
-[[HazChemDoorExamine&lt;-Ok]]
-[[HazChemWhisper&lt;-Whisper Softly at the Door to Unlock]]</tw-passagedata><tw-passagedata pid="23" name="HazChemDoorUnlock" tags="" position="125,981">The key jiggles into the lock, you leverage, it turns, there&#x27;s a click -- all those hours at unlocking doors with keys night classes are starting to pay off.
+[[Ok-&gt;HazChemDoorExamine]]
+[[Whisper Softly at the Door to Unlock-&gt;HazChemWhisper]]</tw-passagedata><tw-passagedata pid="23" name="HazChemDoorUnlock" tags="" position="125,981">The key jiggles into the lock, you leverage, it turns, there&#x27;s a click -- all those hours at unlocking doors with keys night classes are starting to pay off.
 
-[[HazChemRoom&lt;-Enter the Room]]</tw-passagedata><tw-passagedata pid="24" name="HazChemRoom" tags="" position="125,1146">You enter the room to find a prosperous assortment of shelves stacked to their shelf brims with assortments of containers. The containers probably contain hazardous chemicals. This means they&#x27;re all almost certainly highly acidic, radioactive, explosive bases.
+[[Enter the Room-&gt;HazChemRoom]]</tw-passagedata><tw-passagedata pid="24" name="HazChemRoom" tags="" position="125,1146">You enter the room to find a prosperous assortment of shelves stacked to their shelf brims with assortments of containers. The containers probably contain hazardous chemicals. This means they&#x27;re all almost certainly highly acidic, radioactive, explosive bases.
 
 You notice one particular beaker, it shimmers and glows, illuminated as a key item by the game&#x27;s graphics subsystem.
 
@@ -181,8 +181,8 @@ You move your aiming reticle around the room. You examine beaker after beaker wh
 
 You turn your attention back to the key item beaker.
 
-[[TakeKeyItemBeaker&lt;-Take the Beaker]]
-[[DontTakeKeyItemBeaker&lt;-I&#x27;d Prefer Not to Take the Beaker. As a Player I Prefer To Try and Derail the Game, Despite that it&#x27;s Fairly Clear I Can&#x27;t Due to the Constraints of the Game System.]]</tw-passagedata><tw-passagedata pid="25" name="HazChemWhisper" tags="" position="133,1327">You move your lips closers and closer to the door. The metallic smell tickles your nostrils. You move closer still, the cool metal begins to sap the heat radiated from your form. Closer, closer: your lips are close enough that you can almost taste the door, and it you.
+[[Take the Beaker-&gt;TakeKeyItemBeaker]]
+[[I&#x27;d Prefer Not to Take the Beaker. As a Player I Prefer To Try and Derail the Game, Despite that it&#x27;s Fairly Clear I Can&#x27;t Due to the Constraints of the Game System-&gt;DontTakeKeyItemBeaker]]</tw-passagedata><tw-passagedata pid="25" name="HazChemWhisper" tags="" position="133,1327">You move your lips closers and closer to the door. The metallic smell tickles your nostrils. You move closer still, the cool metal begins to sap the heat radiated from your form. Closer, closer: your lips are close enough that you can almost taste the door, and it you.
 
 Through your lips a sensual whisper slides: &quot;Could you please open? I don&#x27;t have time for this puzzle bullshit.&quot;
 
@@ -191,10 +191,10 @@ With a mechanical exhalation the door clicks, softly, slowly. You and the door b
 [[HazChemRoom&lt;-Enter the Room]]
 </tw-passagedata><tw-passagedata pid="26" name="TakeKeyItemBeaker" tags="" position="0,1029">(set: $haveKeyItemBeaker to true)You take the key item beaker, it&#x27;s automatically placed in your inventory. Moving your cursor over it in your inventory there&#x27;s a note that it appears extremely corrosive, but you&#x27;re not further able to interact with it. It&#x27;s probably waiting for some important story event.
 
-[[SecondStoryCorridorLeft2&lt;-Return to the Corridor]]</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1286">No really, I insist you take the beaker.
+[[Return to the Corridor-&gt;SecondStoryCorridorLeft2]]</tw-passagedata><tw-passagedata pid="27" name="DontTakeKeyItemBeaker" tags="" position="0,1286">No really, I insist you take the beaker.
 
-[[TakeKeyItemBeaker&lt;-Take the Beaker]]
-(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)(link-goto: &quot;I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY&quot;, &quot;DontTakeKeyItemBeaker&quot;)](else:)[(link-goto: &quot;Okay, you win, here&#x27;s another option&quot;, &quot;TakeKeyItemBeaker&quot;)]</tw-passagedata><tw-passagedata pid="28" name="SecondStoryRightDoor1" tags="" position="1169,1107">The door creeks open, it would be eerie, but you&#x27;re feeling decidedly positive about how this passage is going to pan out, so it doesn&#x27;t bother you.
+[[Take the Beaker-&gt;TakeKeyItemBeaker]]
+(if: $refuseToTakeBeaker &lt; 10)[(set: $refuseToTakeBeaker to $refuseToTakeBeaker + 1)[[I AM AN INDEPENDANT GAME PLAYER AND I DON&#x27;T HAVE TO TAKE THIS FROM YOU, DM! NO MATTER HOW AWKWARD THIS MAKES IT FOR OTHER PLAYERS, I&#x27;M NOT PROGRESSING THIS STORY-&gt;DontTakeKeyItemBeaker]]](else:)[[[Okay, you win, here&#x27;s another option-&gt;TakeKeyItemBeaker]]]</tw-passagedata><tw-passagedata pid="28" name="SecondStoryRightDoor1" tags="" position="1169,1107">The door creeks open, it would be eerie, but you&#x27;re feeling decidedly positive about how this passage is going to pan out, so it doesn&#x27;t bother you.
 
 The room is brightly lit, mirroring your sunny disposition. File cabinets flank you along both the walls, and at the back of the room sits a desk. Upon the desk sit a number of neatly stacked papers. There are a number of effects around the office that give the impression this is a location used for very important, bureaucratic business, and it is used well.
 
