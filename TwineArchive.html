@@ -17,7 +17,11 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -78,9 +82,7 @@ There&#x27;s a musky, somewhat unpleasant smell to the air. Seems like people ar
 
 [[Check for a Light Switch-&gt;SecondStoryLightCheck]]
 [[Investigate to the Right-&gt;SecondStoryCorridorRight1]]
-[[Investigate to the Left-&gt;SecondStoryCorridorLeft1]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="800,965">{
-(set: $secondStoryCorridorLights to true)
-}You slide your hand along the wall and after a small amount of searching it runs over the tell tale bump of a light switch. With a soft click the lights flicker on.
+[[Investigate to the Left-&gt;SecondStoryCorridorLeft1]]</tw-passagedata><tw-passagedata pid="6" name="SecondStoryLightCheck" tags="" position="800,965">(set: $secondStoryCorridorLights to true)You slide your hand along the wall and after a small amount of searching it runs over the tell tale bump of a light switch. With a soft click the lights flicker on.
 
 You gaze down at the switches and recoil in shock -- there&#x27;s smears of something red and rusty over the switches. As the reader, you&#x27;re almost certain that it&#x27;s blood, but as the in game character you&#x27;re not yet sold on the horrors unfolding here.
 
@@ -240,9 +242,17 @@ Sadly due to the popularity of stacking as a subject, even those leaving univers
 
 You sigh as you rest your hand upon the copier. &quot;I understand&quot;, you softly console. &quot;Even though the world has changed, that doesn&#x27;t mean you have to.&quot; People may not think of the copier as the rock star of business that it once was, but damnit, does it not serve a vital function? Can the cloud print a memo? No!
 
-And how many memos this copier would print if given the chance print. 7 input paper trays, 9 ouputs. As it copies it gives off enough ultraviolet radiation that you&#x27;d have a series sunburn if you tried to photocopy your ass. It can print memos on paper of up to -A2 size. It is a sovereign head of state of copiers.
+And how many memos this copier would print if given the chance print. 7 input paper trays, 9 outputs. As it copies it gives off enough ultraviolet radiation that you&#x27;d have a series sunburn if you tried to photocopy your ass. It can print memos on paper of up to -A2 size. It is a sovereign head of state of copiers.
 
-[[Your Time Will Come Again Noble Copier-&gt;SecondStoryRightDoor2]]</tw-passagedata><tw-passagedata pid="36" name="SecondStoryStationaryCupboardInvestigate" tags="" position="1619,1257">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="SecondStoryPaperStacksInvestigateForReal" tags="" position="1202,1386">I mean, I guess these stacks could be investigated. Yep, stacks of paper. A lot of them. Mundane, yet horrifying. You recall all the printing training you&#x27;ve been through at various organisations: don&#x27;t print too many things, print double sided, the amount of paper used on printing each month stacks higher than the local tallest building, and represents deforestation over 13 hectares of endangered rainforest.
+[[Your Time Will Come Again Noble Copier-&gt;SecondStoryRightDoor2]]</tw-passagedata><tw-passagedata pid="36" name="SecondStoryStationaryCupboardInvestigate" tags="" position="1641,1247">(if: $secondStoryDrawsInvestigated is !0)[You get the feeling you&#x27;ve explored these draws before, but your honed burglar instincts kick in before you can consider it too much.
+
+]You begin rifling through the draws. You remember reading burglary manuals in your youth, as such you search the draws from bottom to top, to save on overhead.(set: $secondStoryDrawsInvestigated to true)
+
+The initial draws are rather mundane and typical office fare: a draw full of loose stables here, a draw full of loose paper clips there. However the final draw opens with a cacophony of metal on metal. The draw appears to be full of a collection of dog tags.
+
+Not people dog tags, but dog dog tags. They&#x27;re inscriped with names like &#x27;Fluffy&#x27; and &#x27;Mr Woofles&#x27;, along with assorted phone numbers. You muse that this is a rather unique set of items to find in a set of office draws.
+
+[[Return to the Room-&gt;SecondStoryRightDoor2]]</tw-passagedata><tw-passagedata pid="37" name="SecondStoryPaperStacksInvestigateForReal" tags="" position="1202,1386">I mean, I guess these stacks could be investigated. Yep, stacks of paper. A lot of them. Mundane, yet horrifying. You recall all the printing training you&#x27;ve been through at various organisations: don&#x27;t print too many things, print double sided, the amount of paper used on printing each month stacks higher than the local tallest building, and represents deforestation over 13 hectares of endangered rainforest.
 
 The paper represents more than simple carbon, it is a testament to human hubris. Knowledge so easily recreated, put to paper, but at what cost? At what cost?
 
