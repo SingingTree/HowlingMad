@@ -1,4 +1,5 @@
-<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.10" ifid="87CEB325-113D-4EBE-BBA3-8E4C7FF5A6B5" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="HowlingMad" startnode="1" creator="Twine" creator-version="2.0.11" ifid="87CEB325-113D-4EBE-BBA3-8E4C7FF5A6B5" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
 
 
 
@@ -35,6 +36,7 @@
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -366,11 +368,15 @@ You arrive at the door to the third story. It appears to have no magnetic lock, 
 
 You stand with the corridor running to your left and right. The lights flicker. The wall in front of you appears to be painted with something red and smeary coloured. You assume it to be tomato sauce, or perhaps ketchup, depending on your background.
 
-[[Lick the Tomato Sauce and/or Ketchup-&gt;ThirdStoryBloodLick]]
-[[To the Left!-&gt;ThirdStoryCorridorLeft1]]
+(if: $superRabies is 0)[[[Lick the Tomato Sauce and/or Ketchup-&gt;ThirdStoryBloodLick]]
+][[To the Left!-&gt;ThirdStoryCorridorLeft1]]
 [[To the Right!-&gt;RightStoryCorridorLeft1]]</tw-passagedata>
 <tw-passagedata pid="45" name="ThirdStoryCorridorLeft1" tags="" position="1226,2063">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="46" name="ThirdStoryBloodLick" tags="" position="1228,1919">The substance tastes coppery, and largey not like tomatoes.</tw-passagedata>
+<tw-passagedata pid="46" name="ThirdStoryBloodLick" tags="" position="1228,1919">(set: $superRabies to true)The substance tastes coppery, and largey not like tomatoes. You begin to suspect your initial suppersition was incorrect, however you&#39;re really not sure what else this could possibly be.
+
+Something shifts in your gut. Your organs lurch, then resettle. Well that was strange. Let&#39;s not do that again.
+
+[[Back to the Corridor-&gt;ThirdStoryCorridor1]]</tw-passagedata>
 <tw-passagedata pid="47" name="RightStoryCorridorLeft1" tags="" position="1549,2065">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 
